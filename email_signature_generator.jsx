@@ -111,32 +111,28 @@ function App() {
                     >
                       <tbody>
                         <tr>
-                          <td style={{ fontSize: "21px", fontFamily:"Noto Sans", fontWeight: "bold" }}>
+                          <td style={{ fontSize: "21px", fontFamily:"Noto Sans", fontWeight: "bold",colour:"#102b4e" }}>
                             {data.name.toUpperCase()}
                           </td>
                         </tr>
 
                         <tr>
                           <td
-                            style={{ fontFamily:"Noto Sans",
-                              fontSize: "17px",
-                              color: "#6bbe45",
-                              paddingBottom: "10px"
-                            }}
-                          >
+                            style={{ fontFamily:"Noto Sans",,colour:"#102b4e", fontSize: "17px",color: "#72bf44",
+                              paddingBottom: "10px"}}>
                             {data.title}
                           </td>
                         </tr>
 
                         <tr>
-                          <td style={{  fontFamily:"Noto Sans",fontSize: "19px",fontWeight: "bold" }}>
+                          <td style={{colour:"#102b4e",fontFamily:"Noto Sans",fontSize: "19px",fontWeight: "bold" }}>
                             RAMP360 Ground Handling Services Private Limited
                           </td>
                         </tr>
 
                         {/* PHONE */}
                         <tr>
-                          <td style={{ paddingTop: "6px" }}>
+                          <td style={{colour:"#102b4e",fontFamily:"Noto Sans", paddingTop: "6px" }}>
                            <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" width="16"
                               style={{ marginRight: 6 }} />
                             {data.phone}
@@ -145,25 +141,20 @@ function App() {
 
                         {/* EMAIL */}
                         <tr> <td>
-                         <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="16"
-                              style={{ marginRight: 6 }} />
-                            {data.email}
-                           </td> </tr>
+                         <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="16"style={{colour:"#102b4e",fontFamily:"Noto Sans", marginRight: 6 }} />
+                            {data.email} </td>
+                        </tr>
 
                         {/* WEBSITE */}
                         <tr>
-                          <td style={{ paddingTop: "3px" }}>
-                           <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png"
-                              width="16"
-                              style={{ marginRight: 6 }}
-                            />
-                            www.ramp360.in
-                          </td>
+                          <td style={{colour:"#102b4e",fontFamily:"Noto Sans", paddingTop: "3px" }}>
+                           <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" width="16" style={{ marginRight: 6 }} />
+                            www.ramp360.in </td>
                         </tr>
 
                         {/* SOCIAL */}
                         <tr>
-                          <td style={{ paddingTop: "8px" }}>
+                          <td style={{ paddingTop: "8px" }}> 
                             <a href="https://maps.app.goo.gl/FjvDmwcM9bpUuACD6">
                               <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" width="18" style={{ marginRight: 6 }} />
                             </a>
