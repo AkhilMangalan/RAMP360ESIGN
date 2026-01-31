@@ -212,8 +212,7 @@ function App() {
           <button onClick={downloadHTML}>Download Signature</button>
         </div>
       </div>
-    </div>
-    
+          
          {/* Footer */}
          <footer
       style={{
@@ -228,6 +227,7 @@ function App() {
       © 2026
     </footer>
 
+    </div>
   );
 }
 
