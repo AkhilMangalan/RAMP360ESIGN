@@ -4,109 +4,81 @@
   <meta charset="UTF-8" />
   <title>RAMP360 Email Signature Generator</title>
 
-  <!-- React -->
   <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-  <!-- Babel -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Custom CSS -->
   <style>
     body {
       font-family: 'Noto Sans', sans-serif;
       background: #f4f7fb;
       padding: 40px;
+      display: flex;
+      justify-content: center;
     }
 
     .app {
-      max-width: 900px;
-      margin: auto;
+      max-width: 1200px;
+      width: 100%;
       background: #fff;
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
     }
 
-    h1 {
-      margin-bottom: 20px;
-      color: #102b4e;
-    }
+    h1 { color:#102b4e; margin-bottom:20px; }
 
     .grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 30px;
     }
 
     input {
-      width: 100%;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      margin-bottom: 10px;
-      font-size: 14px;
+      width:100%;
+      padding:10px;
+      margin-bottom:12px;
+      border-radius:6px;
+      border:1px solid #ccc;
+      font-size:14px;
     }
 
     .signature {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      border-left: 4px solid #72bf44;
-      padding: 16px;
-      background: #f9fbff;
-      border-radius: 8px;
+      display:flex;
+      gap:20px;
+      align-items:center;
+      border-left:4px solid #72bf44;
+      padding:20px;
+      background:#f9fbff;
+      border-radius:10px;
     }
 
-    .signature img {
-      width: 120px;
-    }
+    .signature img { width:130px; }
 
-    .name {
-      font-weight: 700;
-      font-size: 16px;
-      text-transform: uppercase;
-    }
+    .name { font-weight:700; font-size:18px; text-transform:uppercase; }
+    .title { color:#72bf44; font-weight:600; }
+    .company { font-weight:600; margin:4px 0; }
 
-    .title {
-      color: #72bf44;
-      font-weight: 600;
-    }
-
-    .company {
-      font-weight: 600;
-      margin: 4px 0;
-    }
-
-    .icons a {
-      margin-right: 8px;
-      text-decoration: none;
-    }
+    .icons img { width:22px; margin-right:8px; }
 
     button {
-      margin-top: 10px;
-      padding: 10px;
-      width: 100%;
-      border: none;
-      border-radius: 6px;
-      background: #102b4e;
-      color: #72bf44;
-      font-weight: 600;
-      cursor: pointer;
-    }
-
-    button:hover {
-      opacity: 0.9;
+      width:100%;
+      margin-top:10px;
+      padding:10px;
+      border:none;
+      border-radius:6px;
+      background:#102b4e;
+      color:#72bf44;
+      font-weight:600;
+      cursor:pointer;
     }
   </style>
 </head>
 
 <body>
   <div id="root"></div>
-
   <script type="text/babel" data-presets="react" src="email_signature_generator.jsx"></script>
 </body>
 </html>
