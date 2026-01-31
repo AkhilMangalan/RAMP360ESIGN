@@ -204,7 +204,7 @@ function App() {
             </table>
           </div>
 
-          <button onClick={downloadHTML}>Download Signature</button>
+          <button onClick={downloadHTML}>Download</button>
         </div>
       </div>
 
