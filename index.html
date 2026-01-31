@@ -24,20 +24,13 @@
   background-size: cover;
 }
 
-/* White glass card for the app */
-/*.app {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(4px);
+.app {
+  background: transparent;
   min-height: 100vh;
-}*/
-
-    .app {
-      width: 100%;
-      min-height: 100vh;
-      padding: 40px 60px;
-      box-sizing: border-box;
-      background: transparent;
-    }
+  width: 50vw;          /* half the screen */
+  max-width: 720px;    /* safety cap */
+  padding: 40px;
+}
 
     h1 { color:#102a4c; margin-bottom:20px; }
 
@@ -77,6 +70,7 @@
   <script type="text/babel" data-presets="react" src="email_signature_generator.jsx"></script>
 </body>
 </html>
+
 
 
 
