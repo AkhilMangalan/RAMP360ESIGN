@@ -148,10 +148,9 @@ function App() {
                         <tr>
                          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
                               width="16"
-                              style={{ marginRight: 6 }}
-                            />
+                              style={{ marginRight: 6 }/>
                             {data.email}
-                          </td>
+                       
                         </tr>
 
                         {/* WEBSITE */}
