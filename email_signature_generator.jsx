@@ -40,14 +40,14 @@ function App() {
     <div>
   <div className="app" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
   
-    <div style={{ marginBottom: "12px" }}>
+  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
   <img
     src="https://raw.githubusercontent.com/AkhilMangalan/RAMP360ESIGN/main/mnemonic_logo.png"
-    alt="RAMP360"
+    alt="AKL"
     style={{ height: "48px" }}
   />
+  <h1 style={{ margin: 0 }}>Email Signature Generator</h1>
 </div>
-      <h1>Email Signature </h1>
 
       <textarea
         ref={taRef}
