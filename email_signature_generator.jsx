@@ -42,8 +42,8 @@ function App() {
   
   <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
   <img
-    src="https://raw.githubusercontent.com/AkhilMangalan/image/blob/main/mnemonic_logo.png"
-    alt="AKL"
+    src="https://github.com/AkhilMangalan/Image/blob/b46e49a2e975b89b69bd4dc12af95d987c0edb4e/mnemonic_logo.png"
+    alt="RAMP360"
     style={{ height: "48px" }}
   />
   <h1 style={{ margin: 0 }}>Email Signature Generator</h1>
