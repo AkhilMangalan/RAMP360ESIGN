@@ -1,13 +1,12 @@
-const { useState, useRef } = React;
+const { useState } = React;
 
 function App() {
   const [data, setData] = useState({
     name: "",
     title: "",
-    phone: ""
+    phone: "",
+    email: ""
   });
-
-  const taRef = useRef(null);
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
@@ -20,9 +19,9 @@ function App() {
   <tr>
 
     <!-- LEFT LOGO -->
-    <td width="150" align="center"
+    <td width="110" align="center"
       style="padding:10px; border-right:1px solid #ccc; font-family:'Noto Sans';">
-      <!-- Paste logo here in Outlook if needed -->
+      <!-- Paste logo here in Outlook -->
     </td>
 
     <!-- RIGHT CONTENT -->
@@ -30,31 +29,38 @@ function App() {
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
 
         <tr>
-          <td style="font-size:18px; font-weight:bold; font-family:'Noto Sans';">
-            ${data.name}
-          </td>
+          <td style="font-size:18px; font-weight:bold;">${data.name}</td>
         </tr>
 
         <tr>
-          <td style="font-size:15px; color:#6bbe45; padding-bottom:10px; font-family:'Noto Sans';">
+          <td style="font-size:15px; color:#6bbe45; padding-bottom:10px;">
             ${data.title}
           </td>
         </tr>
 
         <tr>
-          <td style="font-weight:bold; font-family:'Noto Sans';">
+          <td style="font-weight:bold;">
             RAMP360 Ground Handling Services Private Limited
           </td>
         </tr>
 
+        <!-- PHONE -->
         <tr>
-          <td style="padding-top:6px; font-family:'Noto Sans';">
+          <td style="padding-top:6px;">
             ☎ ${data.phone}
           </td>
         </tr>
 
+        <!-- EMAIL -->
         <tr>
-          <td style="padding-top:3px; font-family:'Noto Sans';">
+          <td style="padding-top:3px;">
+            ✉ ${data.email}
+          </td>
+        </tr>
+
+        <!-- WEBSITE -->
+        <tr>
+          <td style="padding-top:3px;">
             🌐 www.ramp360.in
           </td>
         </tr>
@@ -80,10 +86,13 @@ function App() {
           <input name="name" placeholder="Name" onChange={handleChange} />
           <input name="title" placeholder="Designation" onChange={handleChange} />
           <input name="phone" placeholder="Phone" onChange={handleChange} />
+          <input name="email" placeholder="Email" onChange={handleChange} />
         </div>
 
         <div>
-          <button onClick={downloadHTML}>Download Signature (.htm)</button>
+          <button onClick={downloadHTML}>
+            Download Signature (.htm)
+          </button>
         </div>
       </div>
     </div>
