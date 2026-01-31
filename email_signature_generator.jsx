@@ -1,4 +1,4 @@
-const { useState, useRef } = React;
+  const { useState, useRef } = React;
 
 // EMBEDDED LOGO (replace if you update brand)
 const LOGO_BASE64 =
@@ -29,7 +29,7 @@ function App() {
     const blob = new Blob([sigRef.current.innerHTML], { type:"text/html;charset=utf-8" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = (data.name || "signature").replace(/\s+/g,"_") + ".htm";
+    a.download = (data.name || "signature").toUpperCase().replace(/\s+/g,"_") + ".htm";
     a.click();
   };
 
@@ -60,7 +60,7 @@ function App() {
                   <td style={{ padding:"10px 15px" }}>
                     <table width="100%" cellpadding="0" cellspacing="0" border="0">
                       <tbody>
-                        <tr><td style={{ fontSize:"18px", fontWeight:"bold" }}>{data.name}</td></tr>
+                        <tr><td style={{ fontSize:"18px", fontWeight:"bold" }}>{data.name.toUpperCase()}</td></tr>
                         <tr><td style={{ fontSize:"15px", color:"#6bbe45", paddingBottom:"10px" }}>{data.title}</td></tr>
                         <tr><td style={{ fontWeight:"bold" }}>RAMP360 Ground Handling Services Private Limited</td></tr>
 
