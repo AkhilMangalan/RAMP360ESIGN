@@ -1,4 +1,3 @@
-import React from "https://esm.sh/react@18";
 const { useState, useRef } = React;
 
 function App() {
@@ -19,14 +18,13 @@ function App() {
     setData({ ...data, [e.target.name]: e.target.value });
   };
 
-  // Fallback-safe copy: select hidden textarea (works in sandbox)
   const copySignature = () => {
     if (!sigRef.current || !taRef.current) return;
     taRef.current.value = sigRef.current.innerText;
-    taRef.current.style.display = 'block';
+    taRef.current.style.display = "block";
     taRef.current.select();
-    try { document.execCommand('copy'); } catch (e) {}
-    taRef.current.style.display = 'none';
+    try { document.execCommand("copy"); } catch (e) {}
+    taRef.current.style.display = "none";
   };
 
   return (
@@ -36,6 +34,7 @@ function App() {
       <textarea ref={taRef} className="absolute -left-[9999px] top-0" readOnly />
 
       <div className="grid grid-cols-2 gap-6">
+        {/* FORM */}
         <div>
           <div className="p-4 space-y-3">
             <input className="border p-2 w-full" name="name" placeholder="Name" onChange={handleChange} />
@@ -48,46 +47,54 @@ function App() {
           </div>
         </div>
 
+        {/* PREVIEW */}
         <div>
           <div className="p-4">
-            <div ref={sigRef} id="signature" className="flex gap-6 items-center p-4 rounded-xl" style={{ fontFamily: 'Noto Sans', color: '#102b4e' }}>
-              <img src="https://raw.githubusercontent.com/AkhilMangalan/Image/main/RAMP-360-Logo.png" className="w-36" />
+            <div
+              ref={sigRef}
+              id="signature"
+              className="flex gap-6 items-center p-4 rounded-xl"
+              style={{ fontFamily: "Noto Sans", color: "#102b4e" }}
+            >
+              <img
+                src="https://raw.githubusercontent.com/AkhilMangalan/Image/main/RAMP-360-Logo.png"
+                className="w-36"
+              />
               <div className="text-sm">
                 <p className="font-bold text-lg uppercase">{data.name}</p>
-                <p className="font-semibold" style={{ color: '#72bf44' }}>{data.title}</p>
+                <p className="font-semibold" style={{ color: "#72bf44" }}>{data.title}</p>
                 <p className="font-semibold mt-1">{data.company}</p>
                 <p className="mt-1">📞 {data.phone}</p>
                 <p>✉ {data.email}</p>
                 <p>🌐 {data.website}</p>
+
                 <div className="flex items-center gap-3 mt-2">
-                  <a href="https://maps.app.goo.gl/FjvDmwcM9bpUuACD6" target="_blank" aria-label="Location">📍</a>
-                  <a href="https://www.linkedin.com/company/ramp360/" target="_blank" aria-label="LinkedIn">in</a>
-                  <a href="https://instagram.com/ramp360.in" target="_blank" aria-label="Instagram">📸</a>
-                  <a href="https://x.com/ramp360_in" target="_blank" aria-label="X">X</a>
+                  <a href="https://maps.app.goo.gl/FjvDmwcM9bpUuACD6" target="_blank">📍</a>
+                  <a href="https://www.linkedin.com/company/ramp360/" target="_blank">in</a>
+                  <a href="https://instagram.com/ramp360.in" target="_blank">📸</a>
+                  <a href="https://x.com/ramp360_in" target="_blank">X</a>
                 </div>
+
                 {data.calendar && (
-                <a href={data.calendar} className="mt-3 inline-block px-3 py-1 rounded" style={{ background: '#102b4e', color: '#72bf44' }}>
-                  Book My Calendar
-                </a>
-              )}
+                  <a
+                    href={data.calendar}
+                    className="mt-3 inline-block px-3 py-1 rounded"
+                    style={{ background: "#102b4e", color: "#72bf44" }}
+                  >
+                    Book My Calendar
+                  </a>
+                )}
               </div>
             </div>
-           <div className="grid grid-cols-2 gap-6">
-  <div>
-    <div className="p-4 space-y-3">
-      ...
-    </div>
-  </div>
 
-  <div>
-    <div className="p-4">
-      ...
-      <button className="mt-4 w-full" onClick={copySignature}>
-        Copy Signature
-      </button>
+            <button className="mt-4 w-full" onClick={copySignature}>
+              Copy Signature
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-      );
+  );
 }
-    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
