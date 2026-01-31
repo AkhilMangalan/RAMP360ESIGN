@@ -36,7 +36,7 @@ function App() {
       <textarea ref={taRef} className="absolute -left-[9999px] top-0" readOnly />
 
       <div className="grid grid-cols-2 gap-6">
-        <Card>
+        <div>
           <CardContent className="p-4 space-y-3">
             <input className="border p-2 w-full" name="name" placeholder="Name" onChange={handleChange} />
             <input className="border p-2 w-full" name="title" placeholder="Designation" onChange={handleChange} />
@@ -46,9 +46,9 @@ function App() {
             <input className="border p-2 w-full" name="email" placeholder="Email" onChange={handleChange} />
             <input className="border p-2 w-full" name="website" placeholder="Website" onChange={handleChange} />
           </CardContent>
-        </Card>
+        </div>
 
-        <Card>
+        <div>
           <CardContent className="p-4">
             <div ref={sigRef} id="signature" className="flex gap-6 items-center p-4 rounded-xl" style={{ fontFamily: 'Noto Sans', color: '#102b4e' }}>
               <img src="https://raw.githubusercontent.com/AkhilMangalan/Image/main/RAMP-360-Logo.png" className="w-36" />
@@ -72,9 +72,9 @@ function App() {
               )}
               </div>
             </div>
-            <Button className="mt-4 w-full" onClick={copySignature}>Copy Signature</button>
+            <button className="mt-4 w-full" onClick={copySignature}>Copy Signature</button>
           </CardContent>
-        </Card>
+        </div>
       </div>
     </div>
     ReactDOM.createRoot(document.getElementById("root")).render(<App />);
