@@ -39,7 +39,14 @@ function App() {
   return (
     <div>
   <div className="app" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
-
+  
+    <div style={{ marginBottom: "12px" }}>
+  <img
+    src="https://raw.githubusercontent.com/AkhilMangalan/RAMP360ESIGN/main/mnemonic_logo.png"
+    alt="RAMP360"
+    style={{ height: "48px" }}
+  />
+</div>
       <h1>Email Signature </h1>
 
       <textarea
