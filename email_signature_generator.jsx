@@ -1,7 +1,7 @@
 import React from "https://esm.sh/react@18";
-import { useState, useRef } from "react";
+const { useState, useRef } = React;
 
-export default function App() {
+function App() {
   const [data, setData] = useState({
     name: "",
     title: "",
@@ -77,5 +77,6 @@ export default function App() {
         </Card>
       </div>
     </div>
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
   );
 }
