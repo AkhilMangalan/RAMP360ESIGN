@@ -72,11 +72,23 @@ function App() {
               )}
               </div>
             </div>
-            <button className="mt-4 w-full" onClick={copySignature}>Copy Signature</button>
-          </div>
-        </div>
-      </div>
+           <div className="grid grid-cols-2 gap-6">
+  <div>
+    <div className="p-4 space-y-3">
+      ...
     </div>
-    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-  );
+  </div>
+
+  <div>
+    <div className="p-4">
+      ...
+      <button className="mt-4 w-full" onClick={copySignature}>
+        Copy Signature
+      </button>
+    </div>
+  </div>
+</div>
+      );
 }
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
