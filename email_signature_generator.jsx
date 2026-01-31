@@ -111,21 +111,21 @@ function App() {
                     >
                       <tbody>
                         <tr>
-                          <td style={{ fontSize: "21px", fontFamily:"Noto Sans", fontWeight: "bold",colour:"#102b4e" }}>
+                          <td style={{ fontSize: "18px", fontFamily:"Noto Sans", fontWeight: "bold",colour:"#102b4e" }}>
                             {data.name.toUpperCase()}
                           </td>
                         </tr>
 
                         <tr>
                           <td
-                            style={{ fontFamily:"Noto Sans",fontSize: "17px",color: "#72bf44",
+                            style={{ fontFamily:"Noto Sans",fontSize: "15px",color: "#72bf44",
                               paddingBottom: "10px"}}>
                             {data.title}
                           </td>
                         </tr>
 
                         <tr>
-                          <td style={{colour:"#102b4e",fontFamily:"Noto Sans",fontSize: "19px",fontWeight: "bold" }}>
+                          <td style={{colour:"#102b4e",fontFamily:"Noto Sans",fontSize: "16px",fontWeight: "bold" }}>
                             RAMP360 Ground Handling Services Private Limited
                           </td>
                         </tr>
