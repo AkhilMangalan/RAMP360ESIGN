@@ -102,7 +102,7 @@ function App() {
           </div>
 
           <button onClick={copySignature}>Copy Signature</button>
-          <button onClick={downloadHTML}>Download HTML</button>
+          <button onClick={downloadHTML}>Download Signature</button>
         </div>
       </div>
     </div>
