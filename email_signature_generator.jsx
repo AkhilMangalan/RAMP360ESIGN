@@ -27,33 +27,58 @@ function App() {
 
   const downloadHTML = () => {
     const html = `
-<div style="font-family:Noto Sans,Arial;color:#102b4e;display:flex;gap:16px;align-items:center;">
-  <img src="https://raw.githubusercontent.com/AkhilMangalan/Image/main/RAMP-360-Logo.png" width="120" />
-  <div>
-    <div style="font-size:16px;font-weight:700;text-transform:uppercase;">${data.name}</div>
-    <div style="color:#72bf44;font-weight:600;">${data.title}</div>
-    <div style="font-weight:600;">RAMP360 Ground Handling Services<br/>Private Limited</div>
-    <div>📞 ${data.phone}</div>
-    <div>✉ ${data.email}</div>
-    <div>🌐 www.ramp360.in</div>
-    <div>
+<table cellpadding="0" cellspacing="0" style="font-family:Arial, sans-serif; color:#102b4e;">
+<tr>
+  <td style="padding-right:15px;">
+    <img src="https://raw.githubusercontent.com/AkhilMangalan/Image/main/RAMP-360-Logo.png" width="110" />
+  </td>
+
+  <td>
+    <div style="font-size:14px;font-weight:bold;">${data.name}</div>
+    <div style="color:#72bf44;font-weight:bold;">${data.title}</div>
+    <div style="font-weight:bold;">RAMP360 Ground Handling Services<br>Private Limited</div>
+
+    <table cellpadding="0" cellspacing="0" style="margin-top:6px;font-size:13px;">
+      <tr>
+        <td><img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" width="14"></td>
+        <td style="padding-left:6px;">${data.phone}</td>
+      </tr>
+      <tr>
+        <td><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="14"></td>
+        <td style="padding-left:6px;">${data.email}</td>
+      </tr>
+      <tr>
+        <td><img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" width="14"></td>
+        <td style="padding-left:6px;">www.ramp360.in</td>
+      </tr>
+    </table>
+
+    <div style="margin-top:8px;">
       <a href="https://maps.app.goo.gl/FjvDmwcM9bpUuACD6">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Google_Maps_pin.svg" width="18"/>
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" width="18">
       </a>
       <a href="https://www.linkedin.com/company/ramp360/">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="18"/>
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="18">
       </a>
       <a href="https://instagram.com/ramp360.in">
-        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="18"/>
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="18">
       </a>
       <a href="https://x.com/ramp360_in">
-        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" width="18"/>
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" width="18">
       </a>
     </div>
-    ${data.calendar ? `<a href="${data.calendar}" style="display:inline-block;margin-top:6px;padding:6px 10px;background:#102b4e;color:#72bf44;text-decoration:none;border-radius:4px;">Book My Calendar</a>` : ``}
-  </div>
-</div>`;
-    const blob = new Blob([html], { type: "text/html" });
+
+    ${data.calendar ? `
+    <div style="margin-top:8px;">
+      <a href="${data.calendar}" style="background:#102b4e;color:#72bf44;padding:6px 10px;text-decoration:none;border-radius:4px;font-size:12px;">
+        Book My Calendar
+      </a>
+    </div>` : ``}
+  </td>
+</tr>
+</table>
+`;
+    const blob = new Blob([html], { type: "text/html;charset=utf-8" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
     a.download = "signature.htm";
@@ -84,12 +109,12 @@ function App() {
               <div className="company">
                 RAMP360 Ground Handling Services<br/>Private Limited
               </div>
-              <div>📞 {data.phone}</div>
-              <div>✉ {data.email}</div>
-              <div>🌐 www.ramp360.in</div>
+              <div>{data.phone}</div>
+              <div>{data.email}</div>
+              <div>www.ramp360.in</div>
 
               <div className="icons">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Google_Maps_pin.svg" />
+                <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" />
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" />
                 <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" />
                 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" />
@@ -102,7 +127,7 @@ function App() {
           </div>
 
           <button onClick={copySignature}>Copy Signature</button>
-          <button onClick={downloadHTML}>Download Signature</button>
+          <button onClick={downloadHTML}>Download HTML</button>
         </div>
       </div>
     </div>
