@@ -37,8 +37,10 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <h1>Email Signature Generator</h1>
+    <div>
+  <div className="app">
+
+      <h1>Email Signature </h1>
 
       <textarea
         ref={taRef}
@@ -207,7 +209,8 @@ function App() {
           <button onClick={downloadHTML}>Download</button>
         </div>
       </div>
-
+    </div>
+      
       {/* Footer */}
       <footer
         style={{
@@ -221,7 +224,6 @@ function App() {
         Powered by <strong>AKL Holdings Inc.</strong><br />
         © 2026
       </footer>
-
     </div>
   );
 }
