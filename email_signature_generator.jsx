@@ -137,9 +137,7 @@ function App() {
                         {/* PHONE */}
                         <tr>
                           <td style={{ paddingTop: "6px" }}>
-                            <img
-                              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/phone.png"
-                              width="16"
+                           <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" width="16"
                               style={{ marginRight: 6 }}
                             />
                             {data.phone}
@@ -148,9 +146,7 @@ function App() {
 
                         {/* EMAIL */}
                         <tr>
-                          <td style={{ paddingTop: "3px" }}>
-                            <img
-                              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/maildotru.png"
+                         <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
                               width="16"
                               style={{ marginRight: 6 }}
                             />
@@ -161,8 +157,7 @@ function App() {
                         {/* WEBSITE */}
                         <tr>
                           <td style={{ paddingTop: "3px" }}>
-                            <img
-                              src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/googlechrome.png"
+                           <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png"
                               width="16"
                               style={{ marginRight: 6 }}
                             />
