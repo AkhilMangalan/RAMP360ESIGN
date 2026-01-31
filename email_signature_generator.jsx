@@ -27,7 +27,7 @@ function App() {
 
   const downloadHTML = () => {
     const html = `
-<table cellpadding="0" cellspacing="0" style="font-family:Arial, sans-serif; color:#102b4e;">
+<table cellpadding="0" cellspacing="0" style="font-family:Noto Sans; color:#102b4e;">
 <tr>
   <td style="padding-right:15px;">
     <img src="https://raw.githubusercontent.com/AkhilMangalan/Image/main/RAMP-360-Logo.png" width="110" />
