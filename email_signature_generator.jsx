@@ -20,7 +20,7 @@ function App() {
   <tr>
 
     <!-- LEFT LOGO -->
-    <td width="110" align="center"
+    <td width="150" align="center"
       style="padding:10px; border-right:1px solid #ccc; font-family:'Noto Sans';">
       <!-- Paste logo here in Outlook if needed -->
     </td>
