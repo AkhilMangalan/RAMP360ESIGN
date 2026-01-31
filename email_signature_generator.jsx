@@ -213,17 +213,22 @@ function App() {
       
       {/* Footer */}
       <footer
-        style={{
-          marginTop: "30px",
-          textAlign: "center",
-          fontSize: "12px",
-          color: "#777",
-          padding: "10px 0"
-        }}
-      >
-        Powered by <strong>AKL Holdings Inc.</strong><br />
-        © 2026
-      </footer>
+  style={{
+    position: "fixed",
+    bottom: 0,
+    left: 0,
+    width: "100%",
+    height: "36px",           // 👈 reserve space
+    lineHeight: "36px",
+    textAlign: "center",
+    fontSize: "12px",
+    color: "#fff",
+    background: "rgba(0,0,0,0.4)",
+    zIndex: 10
+  }} >
+  Powered by <strong>AKL Holdings Inc.</strong> © 2026
+</footer>
+
     </div>
   );
 }
