@@ -34,7 +34,6 @@ function App() {
       <textarea ref={taRef} className="absolute -left-[9999px] top-0" readOnly />
 
       <div className="grid grid-cols-2 gap-6">
-        {/* FORM */}
         <div>
           <div className="p-4 space-y-3">
             <input className="border p-2 w-full" name="name" placeholder="Name" onChange={handleChange} />
@@ -47,7 +46,6 @@ function App() {
           </div>
         </div>
 
-        {/* PREVIEW */}
         <div>
           <div className="p-4">
             <div
