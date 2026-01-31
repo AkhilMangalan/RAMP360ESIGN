@@ -64,20 +64,6 @@ function App() {
           />
         </div>
 
-         {/* Footer */}
-         <footer
-      style={{
-        marginTop: "30px",
-        textAlign: "center",
-        fontSize: "12px",
-        color: "#777",
-        padding: "10px 0"
-      }}
-    >
-      Powered by <strong>AKL Holdings Inc.</strong><br />
-      © 2026
-    </footer>
-
         {/* PREVIEW */}
         <div>
           <div ref={sigRef}>
@@ -219,13 +205,29 @@ function App() {
                 </tr>
               </tbody>
             </table>
+            
           </div>
 
           <button onClick={copySignature}>Copy Signature</button>
-          <button onClick={downloadHTML}>Download .htm</button>
+          <button onClick={downloadHTML}>Download Signature</button>
         </div>
       </div>
     </div>
+    
+         {/* Footer */}
+         <footer
+      style={{
+        marginTop: "30px",
+        textAlign: "center",
+        fontSize: "12px",
+        color: "#777",
+        padding: "10px 0"
+      }}
+    >
+      Powered by <strong>AKL Holdings Inc.</strong><br />
+      © 2026
+    </footer>
+
   );
 }
 
