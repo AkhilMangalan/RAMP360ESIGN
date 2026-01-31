@@ -118,7 +118,7 @@ function App() {
 
                         <tr>
                           <td
-                            style={{ fontFamily:"Noto Sans",colour:"#102b4e", fontSize: "17px",color: "#72bf44",
+                            style={{ fontFamily:"Noto Sans",fontSize: "17px",color: "#72bf44",
                               paddingBottom: "10px"}}>
                             {data.title}
                           </td>
