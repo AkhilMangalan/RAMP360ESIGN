@@ -67,8 +67,8 @@ function App() {
         </div>
 
         {/* PREVIEW */}
-        <div>
-          <div ref={sigRef}>
+        <div style={{ background: "rgba(255,255,255,0.5)", padding: "15px", borderRadius: "8px" }}>
+  <div ref={sigRef}>
             <table
               width="550"
               cellPadding="0"
