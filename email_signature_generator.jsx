@@ -37,7 +37,7 @@ function App() {
 
       <div className="grid grid-cols-2 gap-6">
         <div>
-          <CardContent className="p-4 space-y-3">
+          <div className="p-4 space-y-3">
             <input className="border p-2 w-full" name="name" placeholder="Name" onChange={handleChange} />
             <input className="border p-2 w-full" name="title" placeholder="Designation" onChange={handleChange} />
             <input className="border p-2 w-full" name="company" value={data.company} onChange={handleChange} />
@@ -45,11 +45,11 @@ function App() {
             <input className="border p-2 w-full" name="phone" placeholder="Phone" onChange={handleChange} />
             <input className="border p-2 w-full" name="email" placeholder="Email" onChange={handleChange} />
             <input className="border p-2 w-full" name="website" placeholder="Website" onChange={handleChange} />
-          </CardContent>
+          </div>
         </div>
 
         <div>
-          <CardContent className="p-4">
+          <div className="p-4">
             <div ref={sigRef} id="signature" className="flex gap-6 items-center p-4 rounded-xl" style={{ fontFamily: 'Noto Sans', color: '#102b4e' }}>
               <img src="https://raw.githubusercontent.com/AkhilMangalan/Image/main/RAMP-360-Logo.png" className="w-36" />
               <div className="text-sm">
@@ -73,7 +73,7 @@ function App() {
               </div>
             </div>
             <button className="mt-4 w-full" onClick={copySignature}>Copy Signature</button>
-          </CardContent>
+          </div>
         </div>
       </div>
     </div>
