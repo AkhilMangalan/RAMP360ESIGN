@@ -56,7 +56,7 @@ function App() {
     const blob = new Blob([html], { type: "text/html" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = "signature.html";
+    a.download = "signature.htm";
     a.click();
   };
 
@@ -64,7 +64,7 @@ function App() {
     <div className="app">
       <h1>Email Signature Generator</h1>
 
-      <textarea ref={taRef} className="absolute -left-[9999px] top-0" readOnly />
+      <textarea ref={taRef} style={{ position:"absolute", left:"-9999px" }} readOnly />
 
       <div className="grid">
         <div>
