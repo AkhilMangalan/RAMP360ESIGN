@@ -27,68 +27,94 @@ function App() {
     taRef.current.style.display = "none";
   };
 
+  const downloadHTML = () => {
+    const html = `
+<div style="font-family:Noto Sans,Arial;color:#102b4e;display:flex;gap:16px;align-items:center;">
+  <img src="https://raw.githubusercontent.com/AkhilMangalan/Image/main/RAMP-360-Logo.png" width="120" />
+  <div>
+    <div style="font-size:16px;font-weight:700;text-transform:uppercase;">${data.name}</div>
+    <div style="color:#72bf44;font-weight:600;">${data.title}</div>
+    <div style="font-weight:600;">${data.company}</div>
+    <div>📞 ${data.phone}</div>
+    <div>✉ ${data.email}</div>
+    <div>🌐 ${data.website}</div>
+    <div style="margin-top:6px;">
+      <a href="https://maps.app.goo.gl/FjvDmwcM9bpUuACD6">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/googlemaps.svg" width="18"/>
+      </a>
+      <a href="https://www.linkedin.com/company/ramp360/">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/linkedin.svg" width="18"/>
+      </a>
+      <a href="https://instagram.com/ramp360.in">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/instagram.svg" width="18"/>
+      </a>
+      <a href="https://x.com/ramp360_in">
+        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/x.svg" width="18"/>
+      </a>
+    </div>
+    ${data.calendar ? `<a href="${data.calendar}" style="display:inline-block;margin-top:6px;padding:6px 10px;background:#102b4e;color:#72bf44;text-decoration:none;border-radius:4px;">Book My Calendar</a>` : ``}
+  </div>
+</div>`;
+    const blob = new Blob([html], { type: "text/html" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "signature.html";
+    a.click();
+  };
+
   return (
-    <div className="p-8 max-w-4xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Email Signature Generator</h1>
+    <div className="app">
+      <h1>Email Signature Generator</h1>
 
       <textarea ref={taRef} className="absolute -left-[9999px] top-0" readOnly />
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid">
         <div>
-          <div className="p-4 space-y-3">
-            <input className="border p-2 w-full" name="name" placeholder="Name" onChange={handleChange} />
-            <input className="border p-2 w-full" name="title" placeholder="Designation" onChange={handleChange} />
-            <input className="border p-2 w-full" name="company" value={data.company} onChange={handleChange} />
-            <input className="border p-2 w-full" name="calendar" placeholder="Calendar URL (optional)" onChange={handleChange} />
-            <input className="border p-2 w-full" name="phone" placeholder="Phone" onChange={handleChange} />
-            <input className="border p-2 w-full" name="email" placeholder="Email" onChange={handleChange} />
-            <input className="border p-2 w-full" name="website" placeholder="Website" onChange={handleChange} />
-          </div>
+          <input name="name" placeholder="Name" onChange={handleChange} />
+          <input name="title" placeholder="Designation" onChange={handleChange} />
+          <input name="company" value={data.company} onChange={handleChange} />
+          <input name="calendar" placeholder="Calendar URL (optional)" onChange={handleChange} />
+          <input name="phone" placeholder="Phone" onChange={handleChange} />
+          <input name="email" placeholder="Email" onChange={handleChange} />
+          <input name="website" placeholder="Website" onChange={handleChange} />
         </div>
 
         <div>
-          <div className="p-4">
-            <div
-              ref={sigRef}
-              id="signature"
-              className="flex gap-6 items-center p-4 rounded-xl"
-              style={{ fontFamily: "Noto Sans", color: "#102b4e" }}
-            >
-              <img
-                src="https://raw.githubusercontent.com/AkhilMangalan/Image/main/RAMP-360-Logo.png"
-                className="w-36"
-              />
-              <div className="text-sm">
-                <p className="font-bold text-lg uppercase">{data.name}</p>
-                <p className="font-semibold" style={{ color: "#72bf44" }}>{data.title}</p>
-                <p className="font-semibold mt-1">{data.company}</p>
-                <p className="mt-1">📞 {data.phone}</p>
-                <p>✉ {data.email}</p>
-                <p>🌐 {data.website}</p>
+          <div ref={sigRef} id="signature" className="signature">
+            <img src="https://raw.githubusercontent.com/AkhilMangalan/Image/main/RAMP-360-Logo.png" />
+            <div>
+              <div className="name">{data.name}</div>
+              <div className="title">{data.title}</div>
+              <div className="company">{data.company}</div>
+              <div>📞 {data.phone}</div>
+              <div>✉ {data.email}</div>
+              <div>🌐 {data.website}</div>
 
-                <div className="flex items-center gap-3 mt-2">
-                  <a href="https://maps.app.goo.gl/FjvDmwcM9bpUuACD6" target="_blank">📍</a>
-                  <a href="https://www.linkedin.com/company/ramp360/" target="_blank">in</a>
-                  <a href="https://instagram.com/ramp360.in" target="_blank">📸</a>
-                  <a href="https://x.com/ramp360_in" target="_blank">X</a>
-                </div>
-
-                {data.calendar && (
-                  <a
-                    href={data.calendar}
-                    className="mt-3 inline-block px-3 py-1 rounded"
-                    style={{ background: "#102b4e", color: "#72bf44" }}
-                  >
-                    Book My Calendar
-                  </a>
-                )}
+              <div className="icons">
+                <a href="https://maps.app.goo.gl/FjvDmwcM9bpUuACD6" target="_blank">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/googlemaps.svg" width="20" />
+                </a>
+                <a href="https://www.linkedin.com/company/ramp360/" target="_blank">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/linkedin.svg" width="20" />
+                </a>
+                <a href="https://instagram.com/ramp360.in" target="_blank">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/instagram.svg" width="20" />
+                </a>
+                <a href="https://x.com/ramp360_in" target="_blank">
+                  <img src="https://cdn.jsdelivr.net/npm/simple-icons@v8/icons/x.svg" width="20" />
+                </a>
               </div>
-            </div>
 
-            <button className="mt-4 w-full" onClick={copySignature}>
-              Copy Signature
-            </button>
+              {data.calendar && (
+                <a href={data.calendar} style={{ display: "inline-block", marginTop: "6px" }}>
+                  Book My Calendar
+                </a>
+              )}
+            </div>
           </div>
+
+          <button onClick={copySignature}>Copy Signature</button>
+          <button onClick={downloadHTML}>Download HTML</button>
         </div>
       </div>
     </div>
