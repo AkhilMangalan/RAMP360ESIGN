@@ -111,15 +111,15 @@ function App() {
                     >
                       <tbody>
                         <tr>
-                          <td style={{ fontSize: "18px", fontWeight: "bold" }}>
+                          <td style={{ fontSize: "21px", fontFamily:"Noto Sans", fontWeight: "bold" }}>
                             {data.name.toUpperCase()}
                           </td>
                         </tr>
 
                         <tr>
                           <td
-                            style={{
-                              fontSize: "15px",
+                            style={{ fontFamily:"Noto Sans",
+                              fontSize: "17px",
                               color: "#6bbe45",
                               paddingBottom: "10px"
                             }}
@@ -129,7 +129,7 @@ function App() {
                         </tr>
 
                         <tr>
-                          <td style={{ fontWeight: "bold" }}>
+                          <td style={{  fontFamily:"Noto Sans",fontSize: "19px",fontWeight: "bold" }}>
                             RAMP360 Ground Handling Services Private Limited
                           </td>
                         </tr>
