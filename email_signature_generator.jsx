@@ -138,17 +138,15 @@ function App() {
                         <tr>
                           <td style={{ paddingTop: "6px" }}>
                            <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" width="16"
-                              style={{ marginRight: 6 }}
-                            />
+                              style={{ marginRight: 6 }} />
                             {data.phone}
                           </td>
                         </tr>
 
                         {/* EMAIL */}
                         <tr> <td>
-                         <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
-                              width="16"
-                              style={{ marginRight: 6 }/>
+                         <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="16"
+                              style={{ marginRight: 6 }} />
                             {data.email}
                            </td> </tr>
 
