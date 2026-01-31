@@ -54,7 +54,7 @@ function App() {
               <tbody>
                 <tr>
                   <td width="110" align="center" style={{ padding:"10px", borderRight:"1px solid #ccc" }}>
-                    <img src={LOGO_BASE64} width="90" />
+                    <img src={LOGO_BASE64} width="150" />
                   </td>
 
                   <td style={{ padding:"10px 15px" }}>
