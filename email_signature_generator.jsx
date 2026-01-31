@@ -171,7 +171,7 @@ function App() {
                              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="18" style={{ marginRight: 6 }} />
                             </a>
                             <a href="https://instagram.com/ramp360.in">
-                               <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png width="18" style={{ marginRight: 6 }} />
+                               <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="18" style={{ marginRight: 6 }} />
                             </a>
                             <a href="https://x.com/ramp360_in">
                                <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" width="18" />
