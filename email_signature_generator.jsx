@@ -46,7 +46,7 @@ function App() {
 
         <div>
           <div ref={sigRef}>
-            <table width="550" cellpadding="0" cellspacing="0" border="0"
+            <table width="550" cellPadding="0" cellSpacing="0" border="0"
               style={{ borderCollapse:"collapse", fontFamily:"Noto Sans", color:"#102a4c" }}>
               <tbody>
                 <tr>
@@ -55,7 +55,7 @@ function App() {
                   </td>
 
                   <td style={{ padding:"10px 15px" }}>
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <table width="100%" cellPadding="0" cellSacing="0" border="0">
                       <tbody>
                         <tr><td style={{ fontSize:"18px", fontWeight:"bold" }}>{data.name.toUpperCase()}</td></tr>
                         <tr><td style={{ fontSize:"15px", color:"#6bbe45", paddingBottom:"10px" }}>{data.title}</td></tr>
