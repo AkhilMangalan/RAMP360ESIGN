@@ -1,6 +1,5 @@
+import React from "https://esm.sh/react@18";
 import { useState, useRef } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 
 export default function App() {
   const [data, setData] = useState({
@@ -73,7 +72,7 @@ export default function App() {
               )}
               </div>
             </div>
-            <Button className="mt-4 w-full" onClick={copySignature}>Copy Signature</Button>
+            <Button className="mt-4 w-full" onClick={copySignature}>Copy Signature</button>
           </CardContent>
         </Card>
       </div>
