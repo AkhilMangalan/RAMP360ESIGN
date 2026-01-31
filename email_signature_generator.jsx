@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div>
-  <div className="app">
+  <div className="app" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
 
       <h1>Email Signature </h1>
 
@@ -49,7 +49,7 @@ function App() {
       />
 
       {/* STACK INSTEAD OF GRID */}
-      <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
 
         {/* INPUTS */}
         <div>
