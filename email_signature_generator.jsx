@@ -46,7 +46,7 @@ function App() {
     alt="RAMP360"
     style={{ height: "48px" }}
   />
-  <h1 style={{ margin: 0 }}>Email Signature Generator</h1>
+  <h1 style={{ margin: 0 }}>Email Signature</h1>
 </div>
 
       <textarea
