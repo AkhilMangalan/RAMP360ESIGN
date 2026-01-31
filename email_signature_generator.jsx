@@ -42,7 +42,7 @@ function App() {
   
   <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
   <img
-    src="https://raw.githubusercontent.com/AkhilMangalan/RAMP360ESIGN/main/mnemonic_logo.png"
+    src="https://raw.githubusercontent.com/AkhilMangalan/image/blob/main/mnemonic_logo.png"
     alt="AKL"
     style={{ height: "48px" }}
   />
