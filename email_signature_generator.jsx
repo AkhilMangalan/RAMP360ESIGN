@@ -87,7 +87,6 @@ function App() {
       </button>
     </div>
   </div>
-</div>
       );
 }
     ReactDOM.createRoot(document.getElementById("root")).render(<App />);
