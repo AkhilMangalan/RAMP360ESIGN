@@ -216,3 +216,16 @@ function App() {
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
+<footer
+  style={{
+    marginTop: "30px",
+    textAlign: "center",
+    fontSize: "12px",
+    color: "#777",
+    padding: "10px 0"
+  }}
+>
+  Powered by <strong>AKL Holdings Inc.</strong><br />
+  © 2026
+</footer>
