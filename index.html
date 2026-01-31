@@ -1,11 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Email Signature Generator</title>
-  <meta charset="UTF-8" />
-  <script type="module" src="./main.jsx"></script>
-</head>
-<body>
-  <div id="root"></div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>RAMP360 Email Signature</title>
+
+    <!-- React + ReactDOM -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Babel to run JSX in browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <!-- Load JSX -->
+    <script type="text/babel" data-presets="react" src="email_signature_generator.jsx"></script>
+  </body>
 </html>
