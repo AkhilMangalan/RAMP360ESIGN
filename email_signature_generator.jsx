@@ -46,7 +46,9 @@ function App() {
         readOnly
       />
 
-      <div className="grid">
+      {/* STACK INSTEAD OF GRID */}
+      <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+
         {/* INPUTS */}
         <div>
           <input name="name" placeholder="Name" onChange={handleChange} />
@@ -111,7 +113,7 @@ function App() {
                     >
                       <tbody>
                         <tr>
-                          <td style={{ fontSize: "18px", fontFamily:"Noto Sans", fontWeight: "bold",colour:"#102b4e" }}>
+                          <td style={{ fontSize: "18px", fontFamily:"Noto Sans", fontWeight: "bold", color:"#102b4e" }}>
                             {data.name.toUpperCase()}
                           </td>
                         </tr>
@@ -125,14 +127,14 @@ function App() {
                         </tr>
 
                         <tr>
-                          <td style={{colour:"#102b4e",fontFamily:"Noto Sans",fontSize: "16px",fontWeight: "bold" }}>
+                          <td style={{ color:"#102b4e",fontFamily:"Noto Sans",fontSize: "16px",fontWeight: "bold" }}>
                             RAMP360 Ground Handling Services Private Limited
                           </td>
                         </tr>
 
                         {/* PHONE */}
                         <tr>
-                          <td style={{colour:"#102b4e",fontFamily:"Noto Sans", paddingTop: "6px" }}>
+                          <td style={{ color:"#102b4e",fontFamily:"Noto Sans", paddingTop: "6px" }}>
                            <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" width="16"
                               style={{ marginRight: 6 }} />
                             {data.phone}
@@ -140,16 +142,20 @@ function App() {
                         </tr>
 
                         {/* EMAIL */}
-                        <tr> <td>
-                         <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="16"style={{colour:"#102b4e",fontFamily:"Noto Sans", marginRight: 6 }} />
-                            {data.email} </td>
+                        <tr>
+                          <td style={{ color:"#102b4e",fontFamily:"Noto Sans", paddingTop: "3px" }}>
+                         <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" width="16"
+                              style={{ marginRight: 6 }} />
+                            {data.email}
+                          </td>
                         </tr>
 
                         {/* WEBSITE */}
                         <tr>
-                          <td style={{colour:"#102b4e",fontFamily:"Noto Sans", paddingTop: "3px" }}>
+                          <td style={{ color:"#102b4e",fontFamily:"Noto Sans", paddingTop: "3px" }}>
                            <img src="https://cdn-icons-png.flaticon.com/512/25/25284.png" width="16" style={{ marginRight: 6 }} />
-                            www.ramp360.in </td>
+                            www.ramp360.in
+                          </td>
                         </tr>
 
                         {/* SOCIAL */}
@@ -196,30 +202,29 @@ function App() {
                 </tr>
               </tbody>
             </table>
-            
           </div>
 
-          <button onClick={copySignature}>Copy Signature</button>
           <button onClick={downloadHTML}>Download Signature</button>
         </div>
       </div>
-          
-         {/* Footer */}
-         <footer
-      style={{
-        marginTop: "30px",
-        textAlign: "center",
-        fontSize: "12px",
-        color: "#777",
-        padding: "10px 0"
-      }}
-    >
-      Powered by <strong>AKL Holdings Inc.</strong><br />
-      © 2026
-    </footer>
+
+      {/* Footer */}
+      <footer
+        style={{
+          marginTop: "30px",
+          textAlign: "center",
+          fontSize: "12px",
+          color: "#777",
+          padding: "10px 0"
+        }}
+      >
+        Powered by <strong>AKL Holdings Inc.</strong><br />
+        © 2026
+      </footer>
 
     </div>
   );
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+
