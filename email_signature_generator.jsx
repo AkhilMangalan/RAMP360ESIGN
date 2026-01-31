@@ -165,27 +165,16 @@ function App() {
                         <tr>
                           <td style={{ paddingTop: "8px" }}>
                             <a href="https://maps.app.goo.gl/FjvDmwcM9bpUuACD6">
-                              <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png"
-                                width="18"
-                                style={{ marginRight: 6 }}
-                              />
+                              <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" width="18" style={{ marginRight: 6 }} />
                             </a>
                             <a href="https://www.linkedin.com/company/ramp360/">
-                             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-                                width="18"
-                                style={{ marginRight: 6 }}
-                              />
+                             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="18" style={{ marginRight: 6 }} />
                             </a>
                             <a href="https://instagram.com/ramp360.in">
-                               <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png
-                                width="18"
-                                style={{ marginRight: 6 }}
-                              />
+                               <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png width="18" style={{ marginRight: 6 }} />
                             </a>
                             <a href="https://x.com/ramp360_in">
-                               <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png"
-                                width="18"
-                              />
+                               <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" width="18" />
                             </a>
                           </td>
                         </tr>
