@@ -29,7 +29,8 @@ function App() {
     const blob = new Blob([html], { type: "text/html;charset=utf-8" });
     const a = document.createElement("a");
     a.href = URL.createObjectURL(blob);
-    a.download = "signature.htm";
+    const safeName = data.name.replace(/\s+/g, "_");
+a.download = safeName + ".htm";
     a.click();
   };
 
