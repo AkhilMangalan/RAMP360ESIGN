@@ -23,18 +23,32 @@ function App() {
     taRef.current.style.display = "none";
   };
 
-  const downloadHTML = () => {
-    const blob = new Blob([sigRef.current.innerHTML], {
-      type: "text/html;charset=utf-8"
-    });
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    const safeName = (data.name || "signature")
-      .toUpperCase()
-      .replace(/\s+/g, "_");
-    a.download = safeName + ".htm";
-    a.click();
-  };
+ const downloadHTML = () => {
+  const html = `
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<table cellpadding="0" cellspacing="0" border="0">
+${sigRef.current.innerHTML}
+</table>
+</body>
+</html>
+`;
+
+  const blob = new Blob([html], { type: "text/html;charset=utf-8" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+
+  const safeName = (data.name || "signature")
+    .toUpperCase()
+    .replace(/\s+/g, "_");
+
+  a.download = safeName + ".htm";
+  a.click();
+};
 
   return (
     <div>
