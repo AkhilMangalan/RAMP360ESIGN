@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8" />
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/AkhilMangalan/Image/refs/heads/main/mnemonic_logo.png">
   <title>RAMP360 Email Signature </title>
@@ -23,7 +24,30 @@
               no-repeat center center fixed;
   background-size: cover;
 }
+@media (max-width: 768px) {
 
+  .app {
+    width: 100vw;
+    max-width: none;
+    padding: 20px;
+  }
+
+  table {
+    width: 100% !important;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .grid, .app > div {
+    flex-direction: column !important;
+  }
+
+  input {
+    font-size: 14px;
+  }
+}
 .app {
   background: transparent;
   min-height: 100vh;
@@ -71,6 +95,7 @@
   <script type="text/babel" data-presets="react" src="email_signature_generator.jsx"></script>
 </body>
 </html>
+
 
 
 
