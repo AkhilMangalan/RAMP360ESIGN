@@ -211,26 +211,46 @@ ${sigRef.current.innerHTML}
                           </tr>
 
                         {/* CALENDAR */}
-                        {data.calendar && (
-                          <tr>
-                            <td style={{ paddingTop: "8px" }}>
-                              <a
-                                href={data.calendar}
-                                style={{
-                                  background: "#102a4c",
-                                  color: "#6bbe45",
-                                  padding: "6px 10px",
-                                  textDecoration: "none",
-                                  borderRadius: "4px",
-                                  fontSize: "12px"
-                                }}
-                              >
-                                Book My Calendar
-                              </a>
-                            </td>
-                          </tr>
-                        )}
-                      </tbody>
+{data.calendar && (
+  <tr>
+    <td style={{ paddingTop: "8px" }}>
+      <span
+        dangerouslySetInnerHTML={{
+          __html: `
+<!--[if mso]>
+<v:roundrect xmlns:v="urn:schemas-microsoft-com:vml"
+  href="${data.calendar}"
+  style="height:32px;v-text-anchor:middle;width:150px;"
+  arcsize="12%" fillcolor="#102a4c" stroked="false">
+  <v:textbox inset="0,0,0,0">
+    <center style="color:#6bbe45;font-weight:bold;font-size:12px;font-family:Noto Sans;">
+      Book My Calendar
+    </center>
+  </v:textbox>
+</v:roundrect>
+<![endif]-->
+<!--[if !mso]><!-- -->
+<a href="${data.calendar}"
+  style="
+    display:inline-block;
+    background:#102a4c;
+    color:#6bbe45;
+    padding:6px 14px;
+    border-radius:6px;
+    font-family:Noto Sans;
+    font-size:12px;
+    font-weight:bold;
+    text-decoration:none;">
+  Book My Calendar
+</a>
+<!--<![endif]-->
+`,
+        }}
+      />
+    </td>
+  </tr>
+)}
+</tbody>
                     </table>
                   </td>
                 </tr>
