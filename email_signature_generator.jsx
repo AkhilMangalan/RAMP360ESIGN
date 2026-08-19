@@ -83,18 +83,20 @@ ${sigRef.current.innerHTML}
 
         {/* INPUTS */}
         <div>
-          <input name="name" placeholder="Name" onChange={handleChange} />
+          <input name="name" placeholder="Name" onChange={handleChange} value={data.name} />
           <input
             name="title"
             placeholder="Designation"
             onChange={handleChange}
+            value={data.title}
           />
-          <input name="phone" placeholder="Phone" onChange={handleChange} />
-          <input name="email" placeholder="Email" onChange={handleChange} />
+          <input name="phone" placeholder="Phone" onChange={handleChange} value={data.phone} />
+          <input name="email" placeholder="Email" onChange={handleChange} value={data.email} />
           <input
             name="calendar"
             placeholder="Calendar URL (optional)"
             onChange={handleChange}
+            value={data.calendar}
           />
         </div>
 
@@ -195,26 +197,30 @@ ${sigRef.current.innerHTML}
                         <tr>
                         <td style={{ paddingTop: "8px" }}>
                          <table cellPadding="0" cellSpacing="0" border="0">
+                         <tbody>
+                         <tr>
                          <td style={{ paddingRight: "6px" }}> 
                             <a href="https://maps.app.goo.gl/FjvDmwcM9bpUuACD6">
-                              <img src={LOCATN_PIN} width="18"/>
+                              <img src={LOCATN_PIN} width="18" alt="Location"/>
                             </a>
                           </td>
                             <td style={{paddingRight:"6px"}}>
                             <a href="https://www.linkedin.com/company/ramp360/">
-                             <img src={LINKEDIN_I} width="18"/>
+                             <img src={LINKEDIN_I} width="18" alt="LinkedIn"/>
                             </a>
                             </td>
                             <td style={{paddingRight:"6px"}}>
                             <a href="https://instagram.com/ramp360.in">
-                               <img src={INSTAGRAM} width="18"/>
+                               <img src={INSTAGRAM} width="18" alt="Instagram"/>
                             </a>
                             </td>
                             <td style={{paddingRight:"6px"}}>
                             <a href="https://x.com/ramp360_in">
-                               <img src={TWITTERX_I} width="18" />
+                               <img src={TWITTERX_I} width="18" alt="X (Twitter)" />
                             </a>
                           </td>
+                          </tr>
+                          </tbody>
                           </table>
                           </td>
                         </tr>
@@ -254,7 +260,10 @@ ${sigRef.current.innerHTML}
             </table>
           </div>
 
-          <button onClick={downloadHTML}>Download</button>
+          <div style={{ display: "flex", gap: "8px", marginTop: "8px" }}>
+            <button onClick={copySignature}>Copy HTML</button>
+            <button onClick={downloadHTML}>Download</button>
+          </div>
         </div>
       </div>
     </div>
@@ -282,4 +291,3 @@ ${sigRef.current.innerHTML}
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-
